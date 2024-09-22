@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:8080
+
+#@name create points of interests
+POST {{baseUrl}}/points-of-interests
+Content-Type: application/json
+
+{
+  "name": "inicio",
+  "x": "0",
+  "y": "0"
+}
+
+
+########
+#@name list all points of interests
+GET {{baseUrl}}/points-of-interests
+Content-Type: application/json
+page: 0
+pageSize: 10
+
+########
+#@name list all points of interests near ne
+GET {{baseUrl}}/points-of-interests
+Content-Type: application/json
+x: 20
+y: 10
+dmax: 10
